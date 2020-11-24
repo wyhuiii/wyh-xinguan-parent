@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.wyh.response.Result;
 
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/system/tb-user")
-@Api(value="用户管理")
+@Api(value="系统用户模块",tags="系统用户接口")
 public class TbUserController {
 
     @Autowired
@@ -31,10 +32,10 @@ public class TbUserController {
 
 
     @GetMapping
-    @ApiOperation(value = "查询")
-    public List<TbUser> findUsers(){
+    @ApiOperation(value = "用户列表",notes="查询所有用户信息")
+    public Result findUsers(){
         List<TbUser> list = tbUserService.list();
-        return list;
+        return Result.ok().data("users",list);
     }
 
 }
