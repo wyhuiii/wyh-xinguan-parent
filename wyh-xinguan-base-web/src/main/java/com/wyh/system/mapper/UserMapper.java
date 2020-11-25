@@ -1,6 +1,6 @@
 package com.wyh.system.mapper;
 
-import com.wyh.system.entity.TbUser;
+import com.wyh.system.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author wyh
- * @since 2020-11-14
+ * @since 2020-11-25
  */
-public interface TbUserMapper extends BaseMapper<TbUser> {
+public interface UserMapper extends BaseMapper<User> {
 
 }
