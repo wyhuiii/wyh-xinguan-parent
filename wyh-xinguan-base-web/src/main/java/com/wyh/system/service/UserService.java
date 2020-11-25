@@ -1,6 +1,6 @@
 package com.wyh.system.service;
 
-import com.wyh.system.entity.TbUser;
+import com.wyh.system.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author wyh
- * @since 2020-11-14
+ * @since 2020-11-25
  */
-public interface TbUserService extends IService<TbUser> {
+public interface UserService extends IService<User> {
 
 }
